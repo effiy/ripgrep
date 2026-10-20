@@ -1,54 +1,48 @@
-ignore
-======
-The ignore crate provides a fast recursive directory iterator that respects
-various filters such as globs, file types and `.gitignore` files. This crate
-also provides lower level direct access to gitignore and file type matchers.
+---
+title: "ignore — fast recursive directory iterator with gitignore support"
+tags: [rust, gitignore, walk, file-system, ripgrep]
+category: "projects/ripgrep/crates/ignore"
+created: "2026-10-20"
+updated: "2026-10-20"
+source: "external"
+type: "index"
+status: "stable"
+lifecycle: "active"
+---
+
+# ignore
+
+💡 概述
+
+The ignore crate provides a fast recursive directory iterator that respects various filters such as globs, file types and `.gitignore` files. Also provides lower level direct access to gitignore and file type matchers.
 
 [![Build status](https://github.com/BurntSushi/ripgrep/workflows/ci/badge.svg)](https://github.com/BurntSushi/ripgrep/actions)
 [![](https://img.shields.io/crates/v/ignore.svg)](https://crates.io/crates/ignore)
 
 Dual-licensed under MIT or the [UNLICENSE](https://unlicense.org/).
 
-### Documentation
+---
 
-[https://docs.rs/ignore](https://docs.rs/ignore)
+⚡ 功能
 
-### Usage
+- Recursive directory walking with filters
+- `.gitignore` / `.ignore` file support
+- File type matching
+- Hidden file filtering (configurable)
 
-Add this to your `Cargo.toml`:
+---
 
-```toml
-[dependencies]
-ignore = "0.4"
-```
+📊 指標
 
-### Example
+「待补充」
 
-This example shows the most basic usage of this crate. This code will
-recursively traverse the current directory while automatically filtering out
-files and directories according to ignore globs found in files like
-`.ignore` and `.gitignore`:
+---
 
+🏛️ 设计
 
-```rust,no_run
-use ignore::Walk;
+WalkBuilder provides configurable iterator construction:
 
-for result in Walk::new("./") {
-    // Each item yielded by the iterator is either a directory entry or an
-    // error, so either print the path or the error.
-    match result {
-        Ok(entry) => println!("{}", entry.path().display()),
-        Err(err) => println!("ERROR: {}", err),
-    }
-}
-```
-
-### Example: advanced
-
-By default, the recursive directory iterator will ignore hidden files and
-directories. This can be disabled by building the iterator with `WalkBuilder`:
-
-```rust,no_run
+```rust
 use ignore::WalkBuilder;
 
 for result in WalkBuilder::new("./").hidden(false).build() {
@@ -56,4 +50,15 @@ for result in WalkBuilder::new("./").hidden(false).build() {
 }
 ```
 
-See the documentation for `WalkBuilder` for many other options.
+---
+
+📁 目录
+
+「待补充」
+
+---
+
+🔗 资源
+
+- Documentation: https://docs.rs/ignore
+- Cargo: `ignore = "0.4"`

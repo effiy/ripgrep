@@ -1,30 +1,57 @@
-grep-searcher
--------------
-A high level library for executing fast line oriented searches. This handles
-things like reporting contextual lines, counting lines, inverting a search,
-detecting binary data, automatic UTF-16 transcoding and deciding whether or not
-to use memory maps.
+---
+title: "grep-searcher — fast line-oriented search engine"
+tags: [rust, grep, search, ripgrep]
+category: "projects/ripgrep/crates/searcher"
+created: "2026-10-20"
+updated: "2026-10-20"
+source: "external"
+type: "index"
+status: "stable"
+lifecycle: "active"
+---
+
+# grep-searcher
+
+💡 概述
+
+A high level library for executing fast line oriented searches. This handles things like reporting contextual lines, counting lines, inverting a search, detecting binary data, automatic UTF-16 transcoding and deciding whether or not to use memory maps.
 
 [![Build status](https://github.com/BurntSushi/ripgrep/workflows/ci/badge.svg)](https://github.com/BurntSushi/ripgrep/actions)
 [![](https://img.shields.io/crates/v/grep-searcher.svg)](https://crates.io/crates/grep-searcher)
 
 Dual-licensed under MIT or the [UNLICENSE](https://unlicense.org/).
 
-### Documentation
+---
 
-[https://docs.rs/grep-searcher](https://docs.rs/grep-searcher)
+⚡ 功能
 
-**NOTE:** You probably don't want to use this crate directly. Instead, you
-should prefer the facade defined in the
-[`grep`](https://docs.rs/grep)
-crate.
+- Context line reporting
+- Line counting and invert search
+- Binary data detection
+- Automatic UTF-16 transcoding
+- Memory map decision logic
 
+---
 
-### Usage
+📊 指標
 
-Add this to your `Cargo.toml`:
+「待補充」
 
-```toml
-[dependencies]
-grep-searcher = "0.1"
-```
+---
+
+🏛️ 设计
+
+**NOTE:** You probably don't want to use this crate directly. Instead, prefer the facade defined in the [`grep`](https://docs.rs/grep) crate.
+
+---
+
+📁 目录
+
+「待補充」
+
+---
+
+🔗 资源
+
+- Documentation: https://docs.rs/grep-searcher
+- Cargo: `grep-searcher = "0.1"`

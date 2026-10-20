@@ -1,13 +1,39 @@
-This directory contains updated benchmarks as of 2022-12-16. They were captured
-via the benchsuite script at `benchsuite/benchsuite` from the root of this
-repository. The command that was run:
+---
+title: "archlinux-duff benchmark run — ripgrep benchsuite"
+tags: [ripgrep, benchmark, performance, grep]
+category: "projects/ripgrep/benchsuite/runs"
+created: "2022-12-16"
+updated: "2026-10-20"
+source: "external"
+type: "index"
+status: "stable"
+lifecycle: "active"
+---
+
+# archlinux-duff benchmark run
+
+💡 概述
+
+Benchmark run captured on 2022-12-16 via `benchsuite/benchsuite` from the ripgrep repository root.
+
+Command:
 
     $ ./benchsuite \
           --dir /dev/shm/benchsuite \
           --raw runs/2022-12-16-archlinux-duff/raw.csv \
           | tee runs/2022-12-16-archlinux-duff/summary
 
-The versions of each tool are as follows:
+---
+
+⚡ 功能
+
+Performance comparison across search tools.
+
+---
+
+📊 指标
+
+Tool versions:
 
     $ rg --version
     ripgrep 13.0.0 (rev 87c4a2b4b1)
@@ -31,8 +57,26 @@ The versions of each tool are as follows:
     License BSD-3-Clause: <https://opensource.org/licenses/BSD-3-Clause>
     Written by Robert van Engelen and others: <https://github.com/Genivia/ugrep>
 
-The version of ripgrep used was compiled from source on commit 7f23cd63:
+ripgrep compiled from source on commit 7f23cd63:
 
     $ cargo build --release --features 'pcre2'
 
-This was run on a machine with an Intel i9-12900K with 128GB of memory.
+Machine: Intel i9-12900K with 128GB of memory.
+
+---
+
+🏛️ 设计
+
+「待补充」
+
+---
+
+📁 目录
+
+「待补充」
+
+---
+
+🔗 资源
+
+- ripgrep repository: https://github.com/BurntSushi/ripgrep

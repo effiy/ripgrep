@@ -1,6 +1,22 @@
-This directory contains updated benchmarks as of 2020-10-14. They were captured
-via the benchsuite script at `benchsuite/benchsuite` from the root of this
-repository. The command that was run:
+---
+title: "archlinux-frink benchmark run — ripgrep benchsuite"
+tags: [ripgrep, benchmark, performance, grep]
+category: "projects/ripgrep/benchsuite/runs"
+created: "2020-10-14"
+updated: "2026-10-20"
+source: "external"
+type: "index"
+status: "stable"
+lifecycle: "active"
+---
+
+# archlinux-frink benchmark run
+
+💡 概述
+
+Benchmark run captured on 2020-10-14 via `benchsuite/benchsuite` from the ripgrep repository root.
+
+Command:
 
     $ ./benchsuite \
           --dir /tmp/benchsuite \
@@ -8,7 +24,17 @@ repository. The command that was run:
           --warmup-iter 1 \
           --bench-iter 5
 
-The versions of each tool are as follows:
+---
+
+⚡ 功能
+
+Performance comparison across search tools.
+
+---
+
+📊 指标
+
+Tool versions:
 
     $ rg --version
     ripgrep 12.1.1 (rev def993bad1)
@@ -32,6 +58,24 @@ The versions of each tool are as follows:
     License BSD-3-Clause: <https://opensource.org/licenses/BSD-3-Clause>
     Written by Robert van Engelen and others: <https://github.com/Genivia/ugrep>
 
-The version of ripgrep used was compiled from source on commit def993bad1:
+ripgrep compiled from source on commit def993bad1:
 
     $ cargo build --release --features 'pcre2'
+
+---
+
+🏛️ 设计
+
+「待补充」
+
+---
+
+📁 目录
+
+「待补充」
+
+---
+
+🔗 资源
+
+- ripgrep repository: https://github.com/BurntSushi/ripgrep
